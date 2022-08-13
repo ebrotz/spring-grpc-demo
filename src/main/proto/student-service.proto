@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "com.brotz.schoolmanager.studentservice";
+
+service StudentService {
+    rpc GetStudent(StudentId) returns (Student) {}
+}
+
+message StudentId {
+    string id = 1;
+}
+
+message Student {
+    string id = 1;
+    string name = 2;
+}
